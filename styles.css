@@ -1,0 +1,138 @@
+body {
+  font-family: sans-serif;
+  font-size: 12pt;
+  padding: 1rem 0;
+}
+
+header, nav, main, footer {
+  margin: 1rem auto;
+  width: 35rem;
+}
+
+footer {
+  border-top: 1px solid black;
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+  margin-top: 2.3rem;
+}
+
+.subtitle {
+  font-style: italic;
+}
+
+dfn {
+  font-style: normal;
+  font-weight: bold;
+}
+
+dfn:before {
+  content: "\201c";
+}
+
+dfn:after {
+  content: "\201d";
+}
+
+.gpl {
+  background: rgb(255,220,220);
+}
+
+.agpl {
+  background: rgb(220,220,255);
+}
+
+.lower-alpha-paren, .arabic-in-parens, .sections, .lower-in-parens {
+  list-style-type: none;
+}
+
+.lower-alpha-paren li {
+  counter-increment: lower-alpha-paren-counter;
+  padding: 0.5rem 0;
+}
+
+.lower-alpha-paren li::before {
+  content: counter(lower-alpha-paren-counter, lower-alpha) ')';
+  margin-right: 5px;
+}
+
+.lower-in-parens li {
+  counter-increment: lower-in-parens-counter;
+  padding: 0.5rem 0;
+}
+
+.lower-in-parens li::before {
+  content: '(' counter(lower-in-parens-counter, lower-alpha) ')';
+  margin-right: 5px;
+}
+
+.arabic-in-parens li {
+  counter-increment: arabic-in-parens-counter;
+  padding: 0.5rem 0;
+}
+
+.arabic-in-parens li::before {
+  content: '(' counter(arabic-in-parens-counter) ')';
+  margin-right: 5px;
+}
+
+.sections {
+  counter-reset: sections-counter -1;
+}
+
+.sections li {
+  counter-increment: sections-counter;
+  padding: 0.5rem 0;
+}
+
+.sections li::before {
+  content: 'Section ' counter(sections-counter) '.';
+  margin-right: 5px;
+}
+
+.terms {
+  column-count: 2;
+  list-style-type: none;
+}
+
+aside {
+  border-left: 1px solid #777;
+  display: block;
+  font-family: serif;
+  margin: 1rem 0 1rem 2rem;
+  padding-left: 1rem;
+}
+
+aside p:first-child {
+  margin-top: 0;
+}
+
+aside p:last-child {
+  margin-bottom: 0;
+}
+
+.conspicuous {
+  font-style: italic;
+}
+
+.hidden {
+  display: none;
+}
+
+nav {
+  padding: 0 1rem 0 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: auto;
+}
